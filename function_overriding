@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+class Base{
+    public:
+     void fun()
+        {
+            cout<<"Display function";
+        }
+    
+};
+class Derive: public Base{
+    public:
+    void fun()
+    {
+       cout<<"derive from base";
+    }
+};
+int main()
+{
+   Derive d;
+   d.fun();
+}
+
+OUTPUT: derive from base
