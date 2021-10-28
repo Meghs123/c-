@@ -1,0 +1,21 @@
+// friend class//
+
+#include<iostream>
+using namespace std;
+class Your;
+class My{
+    private: int a;
+    protected: int b;
+    public: int c;
+    friend Your; //can access private and protected member of My object. 
+};
+class Your{
+    public:
+    My m;
+    void fun()
+    {
+        m.a=10;     //a is private member of class My.
+        m.b=12;     //b is protected member of class My.
+        m.c=15;     
+    }
+};
