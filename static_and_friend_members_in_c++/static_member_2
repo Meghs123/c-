@@ -1,0 +1,33 @@
+
+#include <iostream>
+
+using namespace std;
+class Student{
+    public:
+    int roll;
+    string name;
+    static int addno;
+    Student(string n)
+    {
+        addno++;
+        roll=addno;
+        name=n;
+        
+    }
+    void display()
+    {
+        cout<<"Name "<<name<<endl<<"Roll number "<<roll<<endl;
+    }
+};
+int Student::addno=0;
+int main()
+{
+    Student s1("Megha");
+    Student s2("Akanksha");
+    Student s3("Aman");
+    
+    s1.display();
+    s2.display();
+    s3.display();
+    cout<<"Number of admission: "<<Student::addno<<endl;
+}
