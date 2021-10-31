@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+class MyException 
+{
+    
+};
+int main()
+{
+    int x=10,y=0,z;
+    try
+    {
+        if(y==0)
+       // throw 10;
+       // throw 1.5;
+       // throw string("Div by sero again");
+       throw MyException();
+        z=x/y;
+        cout<<z<<endl;
+    }
+    // catch(int e)
+   // catch(double e)
+    // catch(string e)
+    catch(MyException)
+    {
+        cout<<"Division by zero "<<endl;
+    }
+    cout<<"Bye"<<endl;
+    return 0;
+}
