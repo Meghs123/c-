@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+
+class Demo
+{
+    int *p;
+    public: 
+    Demo()
+    {
+        p=new int[10];  //memory inside constructor.
+        cout<<"Constructor of Demo"<<endl;
+    }
+    ~Demo()
+    {
+        delete []p; //memory must be deleted inside destructor.
+        cout<<"Destructor of Demo"<<endl;
+    }
+};
+
+void fun()
+{
+    Demo *p=new Demo(); //dynamically objct is crerated in heap. Constructor is called.
+    delete p; //destructor is called. Object is deleted and memory may not deleted from heap.
+}
+int main()
+
+{
+    fun();
+}
