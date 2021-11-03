@@ -17,7 +17,7 @@ class Demo
 void fun()
 {
     Demo *p=new Demo(); //dynamically objct is crerated in heap. Constructor is called.
-    delete p; //destructor is called.
+    delete p; //destructor is called. And heap memory is explicitly deleted.
 }
 int main()
 
